@@ -48,8 +48,8 @@ function webhookHandler(request, response) {
     console.log(body);
     const {username, text, channel} = body.payload ? JSON.parse(body.payload) : body;
 
-    const markdownBody = text.replace(LINK_REGEX, '[$1]($2)');
-    const htmlBody = marked(text);
+    const markdownBody = text.replace(LINK_REGEX, '[$3]($1)');
+    const htmlBody = marked(markdownBody);
 
     const intent = bridge.getIntent();
     intent.sendMessage(roomId, {

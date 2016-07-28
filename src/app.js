@@ -37,6 +37,7 @@ new Cli({
 
 const app = express();
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded());
 
 
 const LINK_REGEX = /<([^|]+)(\|([^>]+))?>/g;
@@ -44,7 +45,8 @@ const LINK_REGEX = /<([^|]+)(\|([^>]+))?>/g;
 function webhookHandler(request, response) {
     const {body, params} = request;
     const {roomId} = params;
-    const {username, text, channel} = body;
+    console.log(body);
+    const {username, text, channel} = body.payload ? JSON.parse(body.payload) : body;
 
     const markdownBody = text.replace(LINK_REGEX, '[$1]($2)');
     const htmlBody = marked(text);

@@ -1,0 +1,44 @@
+{
+  "name": "matrix-appservice-slack-api",
+  "version": "0.0.1",
+  "description": "An appservice for Matrix.org Homeservers that exposes an API that mirrors Slack's RTM API.",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel src -wd lib & nodemon lib/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aviraldg/matrix-appservice-slack-api.git"
+  },
+  "keywords": [
+    "matrix-org",
+    "slack",
+    "api"
+  ],
+  "author": "Aviral Dasgupta <me@aviraldg.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/aviraldg/matrix-appservice-slack-api/issues"
+  },
+  "homepage": "https://github.com/aviraldg/appservice-slack-api#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "marked": "^0.3.5",
+    "matrix-appservice-bridge": "^1.1.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-core": "^6.10.4",
+    "babel-eslint": "^6.1.2",
+    "babel-plugin-syntax-flow": "^6.8.0",
+    "babel-plugin-transform-flow-comments": "^6.8.0",
+    "babel-plugin-transform-strict-mode": "^6.11.3",
+    "babel-polyfill": "^6.9.1",
+    "babel-preset-es2015": "^6.9.0",
+    "eslint": "^3.0.1",
+    "eslint-plugin-flowtype": "^2.3.1",
+    "nodemon": "^1.9.2"
+  }
+}

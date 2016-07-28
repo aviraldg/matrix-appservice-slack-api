@@ -1,0 +1,9 @@
+id: 6eec9785960d0a401b7cbe0f91d42b3974deb2eaac077ff406e68f10b8cdf03c
+hs_token: 28d96a50e15356829296e209999e824cdeefe307a413e7138f0422f18144e1b2
+as_token: 41a9e9d1218a7ddcb8153c21266e20c0add5a810caaad3efeafb7a97951a7c73
+namespaces:
+  users: []
+  aliases: []
+  rooms: []
+url: 'http://localhost:8090'
+sender_localpart: slack-api
